@@ -6,7 +6,15 @@ namespace NullableTypes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Nullable<DateTime> date = null;
+
+            // shorthand for nullables
+            DateTime? date = null;
+
+            // preffered way!
+            Console.WriteLine("GetValueOrDefault(): " + date.GetValueOrDefault());
+            Console.WriteLine("HasValue: " + date.HasValue);
+            Console.WriteLine("Value: " + date.Value);
         }
     }
 }
