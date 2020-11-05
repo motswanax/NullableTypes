@@ -9,12 +9,12 @@ namespace NullableTypes
             //Nullable<DateTime> date = null;
 
             // shorthand for nullables
-            DateTime? date = null;
+            DateTime? date = new DateTime(2020, 3, 4);
+            DateTime date1 = date.GetValueOrDefault();
+            DateTime? date2 = date1;
 
-            // preffered way!
-            Console.WriteLine("GetValueOrDefault(): " + date.GetValueOrDefault());
-            Console.WriteLine("HasValue: " + date.HasValue);
-            Console.WriteLine("Value: " + date.Value);
+            Console.WriteLine(date1);
+
         }
     }
 }
