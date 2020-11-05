@@ -6,15 +6,18 @@ namespace NullableTypes
     {
         static void Main(string[] args)
         {
-            //Nullable<DateTime> date = null;
+            DateTime? date = null;
+            DateTime date1;
 
-            // shorthand for nullables
-            DateTime? date = new DateTime(2020, 3, 4);
-            DateTime date1 = date.GetValueOrDefault();
-            DateTime? date2 = date1;
+            /*if (date != null)
+                date1 = date.GetValueOrDefault();
+            else
+                date1 = DateTime.Today;*/
 
-            Console.WriteLine(date1);
+            // Null coalescing
+            DateTime date2 = date ?? DateTime.Today;
 
+            Console.WriteLine(date2);
         }
     }
 }
